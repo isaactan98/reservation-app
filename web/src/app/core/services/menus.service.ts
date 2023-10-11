@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { apiLink } from "../helpers/helper";
 import { getFirebaseBackend } from '../../authUtils';
@@ -9,7 +9,11 @@ export class MenusService {
   constructor(private http: HttpClient) {}
 
   getAllMenu() {
-    return this.http.get('/admin/getAllMenu', {observe: 'response',});
+    return this.http.get(apiLink() + '/admin/getAllMenu', {observe: 'response',});
+  }
+
+  getAllMenuUser() {
+    return this.http.get('/user/getAllMenu', {observe: 'response',});
   }
 
   add(item_category: String, item_name: String, item_description: String, item_price: String,
@@ -21,8 +25,15 @@ export class MenusService {
   }
 
   addMenu(formData: FormData) {
-    return this.http.post('/admin/menu/addMenu', formData);
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'multipart/form-data');
+    return this.http.post('/admin/menu/addMenu', formData, { headers: headers });
   }
 
+  modifyMenu(formData: FormData) {
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'multipart/form-data');
+    return this.http.post('/admin/menu/modifyMenu', formData, { headers: headers });
+  }
 
 }

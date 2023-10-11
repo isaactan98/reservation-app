@@ -7,7 +7,7 @@ import { UIModule } from '../../shared/ui/ui.module';
 import { WidgetModule } from '../../shared/widget/widget.module';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { NgbDropdownModule, NgbTooltipModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap'
+import {NgbDropdownModule, NgbTooltipModule, NgbNavModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap'
 import { SimplebarAngularModule } from 'simplebar-angular';
 
 import { DefaultComponent } from './default/default.component';
@@ -21,10 +21,12 @@ import { AddOrdersComponent } from './orders/add-orders/add-orders.component';
 import { AddDeliveryComponent } from './delivery/add-delivery/add-delivery.component';
 import { TablesComponent } from './tables/tables.component';
 import { AddTablesComponent } from './tables/add-tables/add-tables.component';
-import {DropzoneModule} from "ngx-dropzone-wrapper";
+import { DropzoneModule } from "ngx-dropzone-wrapper";
+import { EditOrdersComponent } from './orders/edit-orders/edit-orders.component';
+import { TableListingComponent } from './tables/table-listing/table-listing.component';
 
 @NgModule({
-  declarations: [DefaultComponent, UsersComponent, MenusComponent, OrdersComponent, DeliveryComponent, AddMenusComponent, AddUsersComponent, AddOrdersComponent, AddDeliveryComponent, TablesComponent, AddTablesComponent],
+  declarations: [DefaultComponent, UsersComponent, MenusComponent, OrdersComponent, DeliveryComponent, AddMenusComponent, AddUsersComponent, AddOrdersComponent, EditOrdersComponent, AddDeliveryComponent, TablesComponent, AddTablesComponent, TableListingComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -37,7 +39,8 @@ import {DropzoneModule} from "ngx-dropzone-wrapper";
     WidgetModule,
     NgApexchartsModule,
     SimplebarAngularModule,
-    DropzoneModule
+    DropzoneModule,
+    NgbAlertModule
   ]
 })
 export class DashboardsModule { }

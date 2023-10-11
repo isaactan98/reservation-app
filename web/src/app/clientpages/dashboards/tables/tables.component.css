@@ -4,11 +4,11 @@
 .book-a-table .php-email-form {
     width: 100%;
   }
-  
+
   .book-a-table .php-email-form .form-group {
     padding-bottom: 8px;
   }
-  
+
   .book-a-table .php-email-form .validate {
     display: none;
     color: red;
@@ -16,7 +16,7 @@
     font-weight: 400;
     font-size: 13px;
   }
-  
+
   .book-a-table .php-email-form .error-message {
     display: none;
     color: #fff;
@@ -25,11 +25,11 @@
     padding: 15px;
     font-weight: 600;
   }
-  
+
   .book-a-table .php-email-form .error-message br+br {
     margin-top: 25px;
   }
-  
+
   .book-a-table .php-email-form .sent-message {
     display: none;
     color: #fff;
@@ -38,13 +38,13 @@
     padding: 15px;
     font-weight: 600;
   }
-  
+
   .book-a-table .php-email-form .loading {
     display: none;
     text-align: center;
     padding: 15px;
   }
-  
+
   .book-a-table .php-email-form .loading:before {
     content: "";
     display: inline-block;
@@ -56,7 +56,7 @@
     border-top-color: #1a1814;
     animation: animate-loading 1s linear infinite;
   }
-  
+
   .book-a-table .php-email-form input,
   .book-a-table .php-email-form textarea {
     border-radius: 0;
@@ -66,30 +66,30 @@
     border-color: #eff2f7;
     color: white;
   }
-  
+
   .book-a-table .php-email-form input::-moz-placeholder,
   .book-a-table .php-email-form textarea::-moz-placeholder {
     color: rgba(239, 242, 247, 0.5);
   }
-  
+
   .book-a-table .php-email-form input::placeholder,
   .book-a-table .php-email-form textarea::placeholder {
     color: rgba(239, 242, 247, 0.5);
   }
-  
+
   .book-a-table .php-email-form input:focus,
   .book-a-table .php-email-form textarea:focus {
     border-color: #ff914d;
   }
-  
+
   .book-a-table .php-email-form input {
     height: 44px;
   }
-  
+
   .book-a-table .php-email-form textarea {
     padding: 10px 12px;
   }
-  
+
   .book-a-table .php-email-form button[type=submit] {
     font-weight: 600;
     font-size: 13px;
@@ -104,7 +104,7 @@
     color: white;
     border: 2px solid #ff914d;
   }
-  
+
   .book-a-table .php-email-form button[type=submit]:hover {
     background: #ff914d;
     color: #fff;
@@ -117,15 +117,15 @@ section {
     padding: 60px 0;
     overflow: hidden;
   }
-  
+
   .section-bg {
     background-color: #343a40;
   }
-  
+
   .section-title {
     padding-bottom: 40px;
   }
-  
+
   .section-title h2 {
     font-size: 14px;
     font-weight: 500;
@@ -137,7 +137,7 @@ section {
     color: #aaaaaa;
     /* font-family: "Poppins", sans-serif; */
   }
-  
+
   .section-title h2::after {
     content: "";
     width: 120px;
@@ -146,7 +146,7 @@ section {
     background: rgba(255, 255, 255, 0.2);
     margin: 4px 10px;
   }
-  
+
   .section-title p {
     margin: 0;
     margin: 0;

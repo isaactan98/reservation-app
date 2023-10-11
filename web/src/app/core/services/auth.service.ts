@@ -41,6 +41,13 @@ export class AuthenticationService {
         return this.http.post(`/users/register?username=` + username + '&email=' + email + '&phone_no=' + phone_no + '&password=' + password + '&dob=' + dob,{ observe: 'response' });
       }
 
+      /**
+       * Admin Performs the register
+       */
+      adminRegister(username: String, email: String, phone_no: String, dob: String, role: String, user_access_type: String) {
+        return this.http.post(`/admin/users/add/register?username=` + username + '&email=' + email + '&phone_no=' + phone_no + '&dob=' + dob + '&role=' + role + '&user_access_type=' + user_access_type ,{ observe: 'response' });
+      }
+
 
     /**
      * Find exists email
@@ -56,6 +63,14 @@ export class AuthenticationService {
      */
     getUserDetails(email: String) {
       return this.http.get(`/users/getDetails?email=` + email);
+    }
+
+    /**
+     * Get UserType
+     * @param email email
+     */
+    getUserAccessType(email: String) {
+      return this.http.get(`/users/useraccesstype?email=` + email);
     }
 
     /**
@@ -85,6 +100,7 @@ export class AuthenticationService {
       return this.http.get(`/users/checkCurrentPassword?email=` + email + '&current_password=' + current_password);
     }
 
+
     /**
      * Update the current password to new password
      * @param email email
@@ -93,17 +109,12 @@ export class AuthenticationService {
     UpdateNewPassword(email: String, new_password: String) {
       return this.http.post(`/users/UpdateNewPassword?email=` + email + '&new_password=' + new_password,{ observe: 'response' });
     }
-
-
     /**
      * Reset password
      * @param email email
      */
     resetPassword(email: string) {
-        return getFirebaseBackend().forgetPassword(email).then((response: any) => {
-            const message = response.data;
-            return message;
-        });
+        return this.http.post(`/users/resetPassword?email=` + email ,{ observe: 'response' });
     }
 
     /**
@@ -113,5 +124,6 @@ export class AuthenticationService {
         // logout the user
         getFirebaseBackend().logout();
     }
+
 }
 

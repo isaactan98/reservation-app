@@ -11,7 +11,21 @@ export class UserProfileService {
         return this.http.get<User[]>(`/api/login`);
     }
 
-    // register(username: String, email: String, password: String, dob: String) {
-    //     return this.http.post(`/users/register`, username, email, password, dob);
-    // }
+    getUserProfile(email: String){
+        return this.http.get("/user/profile?email=" + email, { observe: 'response' });
+    }
+
+    editUserProfile(userProfile: User){
+       return this.http.post("/user/edituserprofile", userProfile, { observe: 'response' })
+    }
+
+    getAllUser() {
+      return this.http.get("/admin/getAllUser", { observe: 'response' });
+    }
+
+    deleteUser(userID: number) {
+      console.log(userID);
+      return this.http.post("/admin/deleteUser?userID=" + userID, { observe: 'response' });
+    }
+
 }

@@ -38,10 +38,10 @@ public class Item {
     private String item_image;
 
     @Column(name = "item_created_dt")
-    private String item_created_dt;
+    private Date item_created_dt;
 
     @Column(name = "item_updated_dt")
-    private String item_updated_dt;
+    private Date item_updated_dt;
 
     @Column(name = "created_by")
     private String created_by;
@@ -109,19 +109,19 @@ public class Item {
 
     public void setItem_image(String item_image) { this.item_image = item_image;}
 
-    public String getItem_created_dt() {
+    public Date getItem_created_dt() {
         return this.item_created_dt;
     }
 
-    public void setItem_created_dt(String item_created_dt) {
+    public void setItem_created_dt(Date item_created_dt) {
         this.item_created_dt = item_created_dt;
     }
 
-    public String getItem_updated_dt() {
+    public Date getItem_updated_dt() {
         return this.item_updated_dt;
     }
 
-    public void setItem_updated_dt(String item_updated_dt) {
+    public void setItem_updated_dt(Date item_updated_dt) {
         this.item_updated_dt = item_updated_dt;
     }
 

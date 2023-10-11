@@ -9,6 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.tablehop.tablehop_restaurant_app.entity.User;
 
+import java.util.List;
+
 @Repository
 public interface userRepository extends JpaRepository<User, Integer> {
 
@@ -26,9 +28,10 @@ public interface userRepository extends JpaRepository<User, Integer> {
     @Query(value="SELECT * from user WHERE email = ?1 AND password = ?2", nativeQuery=true)
     public User checkCurrentPassword(String email, String current_password);
 
-//    @Modifying(clearAutomatically = true)
-//    @Transactional
-//    @Query(value="UPDATE user set password = ?2 WHERE email = ?1", nativeQuery=true)
-//    public void updateNewPassword(String email, String new_password);
+    @Query(value="SELECT * from user WHERE email = ?1", nativeQuery=true)
+    public User getUserProfile(String email);
+
+    @Query(value="SELECT * FROM user ORDER BY user_type;", nativeQuery=true)
+    public List<User> getAllUser();
 
 }

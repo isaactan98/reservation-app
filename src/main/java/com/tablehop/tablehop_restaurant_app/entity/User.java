@@ -37,7 +37,7 @@ public class User {
     private String address;
 
     @Column(name = "dob")
-    private Date dob;
+    private String dob;
 
     @Column(name = "user_type")
     private String user_type;
@@ -63,9 +63,7 @@ public class User {
         return this.userName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+    public void setUserName(String userName) {this.userName = userName; }
 
     public String getPassword() { return password; }
 
@@ -95,11 +93,11 @@ public class User {
         this.address = address;
     }
 
-    public Date getDob() {
+    public String getDob() {
         return this.dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 
