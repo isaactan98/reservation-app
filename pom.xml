@@ -123,7 +123,7 @@
             <configuration>  
                 <archive>  
                     <manifest>  
-                        <mainClass>com.tablehop.tablehop_restaurant_app.TablehopRestaurantAppApplication</mainClass>  
+                        <mainClass>com.tablehop.tablehop_restaurant_app</mainClass>  
                     </manifest>  
                 </archive>  
             </configuration>  
